@@ -12,9 +12,9 @@
     ),
     title-style: (
       color: black,
-      weight: "bold",
+      weight: "semibold",
     ),
-    title: [=== #qi #title],
+    title: [#qi #title],
     ..body
   )
 }
@@ -22,3 +22,19 @@
 // Default color is blue, can be changed to black if you want to print
 // Note that title is optional, it can be removed if you just don't set it to anything (just do #question[content])
 // modify from https://github.com/stuxf/adaptable-pset/blob/main/src/lib.typ
+
+// question and answer helping functions
+
+#let show-answers = state("show-answers", true)
+#let set-show-answers(value) = {
+  show-answers.update(value)
+}
+
+#let qa(
+  title,
+  question_ctx,
+  answer
+) = {
+  question(title: title)[ #question_ctx ]
+  context {if show-answers.get() {answer} else {hide(answer)}}
+}
