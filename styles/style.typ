@@ -1,8 +1,13 @@
+#let default-font = "New Computer Modern Math" 
+#let default-cjk-font = "更紗黑體 UI TC"
+// #let default-cjk-font = "霞鶩文楷 TC"
+
 #let homework-style(body) = {
   set text(
     font: (
-      "New Computer Modern Math",
-      "霞鶩文楷 TC",
+      default-font,
+      default-cjk-font,
+      "Sarasa Ui J",
     ),
     size: 12pt,
   )
@@ -20,9 +25,8 @@
 
 /*
 ** 在任何方塊中使用，將中文轉為預設字體。
-** 預設：霞鶩文楷
 ***/
 #let tc(..content) = {
-  text(font: "霞鶩文楷 TC", ..content)
+  text(font: default-cjk-font, ..content)
 }
 
