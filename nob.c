@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
     flag_bool_var(&help,"-help", false, "print help messages");
     flag_bool_var(&help,"h", false, "print help messages(shorthand)");
 
-    if (!flag_parse(argc, argv)) {
+    if (!flag_parse(argc, argv) || argc == 1) {
         flag_print_options(stderr);
         flag_print_error(stderr);
         return 1;

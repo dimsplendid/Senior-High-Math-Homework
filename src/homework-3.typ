@@ -10,7 +10,7 @@
 #show: homework-style
 
 
-#set-show-answers(false)
+// #set-show-answers(false)
 = Homework 3
 == 多項式的運算與應用
 
@@ -21,20 +21,18 @@
   4. 若三次多項式 $f(x) = (x-1)(x^2+x) + (x+1)$，則 $f(x)$ 除以 $x-1$ 的餘式為 $x+1$。
   5. 設多項式 $f(x)$ 滿足 $f(-1) = 2$，則 $f(x)$ 除以 $2x+2$ 的餘式為 $2$。 
 ][
-  \
-  \
-  \
-  \
-  \
-  \
-  \
+  1. O
+  2. O
+  3. X
+  4. X
+  5. O
 ]
 
 #qa[][
   若 $x^4 + 4x^2 + a x + b$ 可被 $x^2 + 2x + 3$ 整除，試求 $a$、$b$ 的值與商式。
 ][
   $
-    a = 4, b = 5
+    a = 7, b = 6
   $
   \
   \
@@ -129,7 +127,10 @@ $ f(x) = a(x-1)^3 + b(x-1)^2 + c(x-1) + d $
   2. $f(x) dot g(x)$。
   3. $f(x) div g(x)$ 的商及餘式。 
 ][
-  
+  1. $f(x) + 4g(x) = 2x^4+7x^2-6$  
+    $
+      
+    $
 ]
 
 
@@ -140,10 +141,14 @@ $ f(x) = a(x-1)^3 + b(x-1)^2 + c(x-1) + d $
 #qa[][
   我們知道：$(5+7)/2 = 6$，並且 $trirad(2,5) < trirad(2,6) < trirad(2,7)$，請問 $trirad(2, 6)$ 比較接近 $trirad(2,5)$ 還是 $trirad(2,7)$?
 ][
-  \
-  \
-  \
-  \
+$
+  &trirad(2,6) - trirad(2,5) = 1/(trirad(2,6) + trirad(2,5)) \
+  &trirad(2,7) - trirad(2,6) = 1/(trirad(2,7) + trirad(2,6)) \
+  &trirad(2,7) + trirad(2,6) > trirad(2,6) + trirad(2,5) \
+  &therefore \
+  &trirad(2,7) - trirad(2,6) < trirad(2,6) - trirad(2,5) \
+  &=> trirad(2,6) text("is closer to") trirad(2,7).
+$
 ]
 
 #qa[三個相異實數 $a$, $b$, $c$ 滿足 $b = 4/5a + 1/5c$ ，如果將 $a$, $b$, $c$ 標注在數線上，請問下列哪些是正確的：][
@@ -154,6 +159,11 @@ $ f(x) = a(x-1)^3 + b(x-1)^2 + c(x-1) + d $
   4. $a$ 到 $c$ 的距離是 $b$ 到 $c$ 距離的 $5$ 倍。
   5. 如果 $|b| = 4/5|a| + 1/5|c|$，則 $a times b times c > 0$。
 ][
+  1. O
+  2. X, 不一定
+  3. X, $d$ 在 $overline(a c)$ 外
+  4. X, $5/4$ 倍
+  5. X, 不一定，可能均為負，$a times b times c < 0$
 ]
 
 #pagebreak()
@@ -165,13 +175,9 @@ $ f(x) = a(x-1)^3 + b(x-1)^2 + c(x-1) + d $
   3. $trirad(3,2) dot trirad(4,3)$
 ][
   // #set enum(numbering: "(1)")
-  1. $2$
-  2. $trirad(15,6)$
-  3. $trirad(12,432)$
-  \
-  \
-  \
-  \
+  1. $trirad(3,2) dot trirad(3,4) = trirad(3,2 times 4) = 2$
+  2. $trirad(5, trirad(3,6)) =  trirad(5 times 3, 6) = trirad(15,6)$
+  3. $trirad(3,2) dot trirad(4,3) = trirad(3 times 4, tripow(2,4)) dot trirad(4 times 3, tripow(3,3)) = trirad(12, 16) dot trirad(12, 27) = trirad(12, 16 times 27) = trirad(12,432)$
 ]
 
 #qa[用計算機計算下列各數的近似值(四捨五入至小數點後第四位)][
@@ -197,7 +203,7 @@ $ f(x) = a(x-1)^3 + b(x-1)^2 + c(x-1) + d $
   2. 過點 $A(3,4)$, $B(3,7)$ 的直線方程式？
   3. 設直線 $L$ 的斜率為 $m$，$y$ 截距為 $b$，則 $L$ 的方程式為？
 ][
-  1.
-  2.
+  1. $y = -3/7 + 37/7$
+  2. $x = 3$
   3. $y = m dot x+b$
 ]
